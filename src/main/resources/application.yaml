@@ -1,0 +1,11 @@
+server:
+  contextPath: /bogowonto-app
+  port:
+    8080
+
+welcome:
+  message: Bogowonto
+
+spring:
+  thymeleaf:
+    cache: false

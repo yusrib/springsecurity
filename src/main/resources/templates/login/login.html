@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shards.min.css">
+    <title>Login page</title>
+</head>
+<body>
+    <form th:action="@{/login}" method="post">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Login Page</h2>
+                    <table class="table table-striped table-responsive-md">
+                        <tbody>
+                            <tr>
+                                <td th:if="${param.error}"><label>Invalid username and password.</label></td>
+                                <td th:if="${param.logout}"><label>You have been logged out.</label></td>
+                            </tr>
+                            <tr>
+                                <td><label> User Name : <input type="text" name="username"/> </label></td>
+                                <td><label> Password: <input type="password" name="password"/> </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Sign In"/></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
